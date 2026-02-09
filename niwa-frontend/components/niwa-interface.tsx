@@ -328,7 +328,7 @@ export default function NiwaInterface() {
                     const formData = new FormData();
                     formData.append('file', file);
 
-                    const response = await fetch('http://127.0.0.1:8000/upload_and_audit', {
+                    const response = await fetch(`${process.env.NEXT_PUBLIC_NIWA_API_BASE_URL}/upload_and_audit`, {
                         method: 'POST',
                         body: formData,
                     });
